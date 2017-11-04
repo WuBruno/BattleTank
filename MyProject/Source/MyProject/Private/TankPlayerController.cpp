@@ -7,18 +7,15 @@ void ATankPlayerController::BeginPlay() {
 	Super::BeginPlay();
 
 	auto ControlledTank = GetControlledTank();
-	if (!ControlledTank)
-	{
+	if (!ControlledTank){
 		UE_LOG(LogTemp, Warning, TEXT("PlayerController not possesing a tank"));
 	}
-	else
-	{
+	else{
 		UE_LOG(LogTemp, Warning, TEXT("PlayerController possesing: %s"), *ControlledTank->GetName());
 	}
 }
 
 ATank* ATankPlayerController :: GetControlledTank() const{
-
 	return Cast<ATank>(GetPawn());
 }
 
