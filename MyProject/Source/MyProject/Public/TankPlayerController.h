@@ -13,7 +13,7 @@ UCLASS()
 class MYPROJECT_API ATankPlayerController : public APlayerController{
 	GENERATED_BODY()
 	
-public:
+private:
 	virtual void BeginPlay() override;
 	ATank * GetControlledTank() const;
 	virtual void Tick(float DeltaSeconds) override;
@@ -22,4 +22,10 @@ public:
 	void AimTowardsCrosshair(); 
 	// Return an OUT parameter, true if hit landscape
 	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
+	
+	UPROPERTY(EditAnywhere)
+	float CrossHairXLocation = 0.5;
+
+	UPROPERTY(EditAnywhere)
+	float CrossHairYLocation = 0.3333;
 };
