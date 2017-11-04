@@ -14,6 +14,10 @@ class MYPROJECT_API ATankPlayerController : public APlayerController{
 	GENERATED_BODY()
 	
 public:
-	void BeginPlay() override;
+	virtual void BeginPlay() override;
 	ATank * GetControlledTank() const;
+	virtual void Tick(float DeltaSeconds) override;
+	//Start the tan kmoving the barrel so that a shot would hit where
+	//the crosshair intersects the world 
+	void AimTowardsCrosshair(); 
 };
