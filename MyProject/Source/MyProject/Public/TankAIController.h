@@ -3,7 +3,9 @@
 #pragma once
 
 #include "AIController.h"
+#include "MyProject.h"
 #include "TankAIController.generated.h"
+
 
 /**
  * 
