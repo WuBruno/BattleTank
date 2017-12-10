@@ -6,6 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h" // Put new includes above
 
+class UTankBarrel;
 
 UCLASS()
 class MYPROJECT_API ATank : public APawn
